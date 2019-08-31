@@ -31,18 +31,7 @@ html {
     width: 100%;
     height: 100vh;
     scroll-behavior: smooth;
-    padding: 0 8.12rem;
-    font-size: 100%;
-}
-
-@media only screen and (max-width: 320px) {
-  html {
-    margin: 0;
-    padding: 0px 0px;
-    width: 100%;
-    height: 100vh;
-    scroll-behavior: smooth;
-    padding: 0 1rem;
+    padding: 0 130px;
     font-size: 100%;
 }
 
@@ -92,7 +81,7 @@ li {
 /* Hero text */
 h1 {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 200px;
+  font-size: 12.5rem;
   font-weight: 900;
   color: #5e671cd3;
   text-shadow: 7px 7px rgba(255, 255, 255, 0.836);
@@ -107,7 +96,7 @@ mix-blend-mode: difference;
 transition: 0.4s ease-in-out;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 320px) {
   h1 {
     font-size: 6rem;
   }
@@ -256,7 +245,7 @@ background: #8f974d;
 header {
   background-image: linear-gradient(130deg, transparent, rgba(0,0,0,.8)),
   url("Images/parallax backgrounds/reda-trail.jpeg");
-  min-height: 50rem;
+  min-height: 800px;
   background-attachment: fixed;
   background-position: center ;
   background-repeat: no-repeat;
@@ -279,18 +268,6 @@ header {
   grid-column: 1 / 1;
   margin: 0;
 }
-
-@media only screen and (max-width: 320px) {
-  header {
-      background-image: linear-gradient(130deg, transparent, rgba(0,0,0,.8)),
-      url("Images/parallax backgrounds/reda-trail.jpeg");
-      min-height: 10rem;
-      background-attachment: fixed;
-      background-position: center ;
-      background-repeat: no-repeat;
-      grid-column: 1 / 1;
-      margin: 0;
-    }
 
 /* Grid 1 elements - About > Interests */
 .interests {
