@@ -1,9 +1,11 @@
 
 /**
- * stylesheet.css 
 
- *
- 
+ * stylesheet-mob.css
+
+
+
+
  * Order
  * - GENERAL
  * - NAV BAR
@@ -12,13 +14,12 @@
  * - LINKS
  * - ICONS & BUTTONS
  * - GRID CONTAINERS
- * - SECTIONS (Grid Elements): About, Experience, 
+ * - SECTIONS (Grid Elements): About, Experience,
  * - QUOTES
  * - ANIMATIONS
  * - CAROUSEL
 
-
-
+ I've really struggled with making the carousel images responsive. I've used bits of flexbox and grid but I think I need to go over it some more as it didn't end up working in the way I wanted. I'll definitely start mobile-first with my layout next time! 
 
 /*------ GENERAL ------*/
 
@@ -28,11 +29,10 @@
 
 html {
     margin: 0;
-    padding: 0px 0px;
     width: 100%;
     height: 100vh;
     scroll-behavior: smooth;
-    padding: 0 130px;
+    padding: 0 20px;
     font-size: 100%;
 }
 
@@ -53,9 +53,10 @@ nav {
   width: 100%;
   overflow: auto;
   background-color: white;
-  font-size: 1em;
+  font-size: 0.5em;
   text-align: center;
   align-items: center;
+  display: flex;
 }
 
 
@@ -72,7 +73,7 @@ ul {
 
 li {
     display:grid;
-    margin: 1.2em;
+    margin: 0.4em;
     text-align: center;
 }
 
@@ -82,41 +83,41 @@ li {
 /* Hero text */
 h1 {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 200px;
+  font-size: 80px;
   font-weight: 900;
   color: #5e671cd3;
-  text-shadow: 7px 7px rgba(255, 255, 255, 0.836);
+  text-shadow: 3px 3px rgba(255, 255, 255, 0.836);
   margin: 0em 0em;
   padding:0em;
 }
 
 h1:hover {
 color: white; 
-text-shadow: 7px 7px rgba(155, 91, 91, 0.897);
-mix-blend-mode: difference;
+text-shadow: 3px 3px rgba(155, 91, 91, 0.801);
+mix-blend-mode: normal;
 transition: 0.4s ease-in-out;
 }
 
 /* Headings */
 h2 {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 600;
   color: #5e671ce1;
-  margin: 1rem 1.3rem 0.1rem 0rem;
+  margin: 0.5rem 0.7rem 0.1rem 0rem;
 }
 
 /* Subheading */
 h3 {
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 600;
   color:hsl(350, 46%, 68%);
-  margin: 1rem 0rem;
+  margin: 0rem 0rem;
 }
 
 /* Header subtext */
 h4 {
 font-weight: bold;
-font-size: 1.6rem;
+font-size: 1rem;
   color: rgb(255, 255, 255);
   margin: 1rem 1rem;
 }
@@ -132,7 +133,7 @@ h5 {
 /* Quote source text */
 h6 {
   font-weight: 200;
-  font-size: 25px;
+  font-size: 15px;
   color: rgb(255, 255, 255);
   margin: 1.4rem 2.8rem;
 }
@@ -141,7 +142,7 @@ h6 {
 
 p {
 font-family: 'Raleway', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 200;
   color: rgb(97, 95, 95);
   padding: 0px 0px;
@@ -179,8 +180,12 @@ i.fas, i.fad {
 text-align:center;
 scroll-behavior: smooth;
 color:hsl(350, 46%, 68%);
-margin: 0.2em 0em;
+margin: 0.1em 0em;
 mix-blend-mode: difference;
+}
+
+.codewarsicon {
+    max-width: 20%;
 }
 
 i.fas:hover {
@@ -189,9 +194,9 @@ mix-blend-mode: normal;
 }
 
 .fab {
-padding: 20px;
-font-size: 50px;
-margin-bottom: 20px;
+padding: 5px;
+font-size: 20px;
+margin-bottom: 5px;
 text-decoration: none;
 color: rgb(255, 255, 255);
 background: linear-gradient( hsl(350, 46%, 68%), #8d5d5d, #350a49);
@@ -217,7 +222,7 @@ background: #8f974d;
 /* About: Interests */
 .grid1 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 100%;
 }
 
@@ -234,7 +239,7 @@ background: #8f974d;
 header {
   background-image: linear-gradient(130deg, transparent, rgba(0,0,0,.8)),
   url("Images/parallax backgrounds/reda-trail.jpeg");
-  min-height: 800px;
+  min-height: 700px;
   background-attachment: fixed;
   background-position: center ;
   background-repeat: no-repeat;
@@ -247,13 +252,13 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  top: 75px;
+  top: 40px;
   grid-column: 1 / 1;
   margin: 0;
 }
 
 .headerSubtext {
-  padding: 0em 5em;
+  padding: 0em 0.5em;
   grid-column: 1 / 1;
   margin: 0;
 }
@@ -270,19 +275,22 @@ header {
 }
 
 .thegoodplace {
-    grid-column: 2 / 3;
+    grid-column: 1 / 1;
     margin: 0em 0em 0em 0em;
     font-size: 1em;
     text-align: center;
+    display:none;  /* This kept layering over the top of the Experience section so I ended up hiding it for the mobile view and adding a mobile version which is hidden in the desktop view. Positioning and making images responsive is definitely something I'm keen to work on.*/
 }
 
 .thegoodplace > img {
-    width: 100%;
+    width: 50%;
     margin: auto;
 }
 
 #thegoodplacemob {
-  display:none;
+    display: block;
+    max-width: 100%;
+    margin: 1em;
 }
 
 .thegoodplace > img:hover {
@@ -302,7 +310,7 @@ header {
     height: auto;
     position: relative;
     margin: 0px 0px;
-    padding: 2em 2em;
+    padding: 0.5em 0.5em;
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
@@ -312,7 +320,7 @@ header {
 }
 
 #quoteQuote {
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
 #quoteSource {
@@ -325,7 +333,7 @@ header {
 
 #quoteRec {
     background-image: url("Images/parallax backgrounds/reda-balloons2.png");
-    margin:0rem 1.3rem 1.3rem 0rem;
+    margin:0rem 0.7rem 0.7rem 0rem;
 }
 
 #quoteCSlewis {
@@ -360,8 +368,10 @@ span.waving {
 
  .slide {
      display:none;
-     max-width: 100%; 
+     max-width: 10%; 
      height: auto; 
+     object-fit: container;
+     
  }
 
 .current {
@@ -378,6 +388,7 @@ span.waving {
     overflow:hidden;
     height: 70vh;
     width: 80vw;
+    display:flex;
   }
 
 /* Hide play button show pause */
@@ -426,8 +437,6 @@ span.waving {
   .playBtn > i.fas {
     mix-blend-mode: normal;
     color: hsl(350, 46%, 68%);
-    background: rgba(0,0,0,0.5);
-    border-radius: 50%
   }
 
   /* Hover over carousel buttons colour */
@@ -442,8 +451,8 @@ span.waving {
   /* Carousel caption style */
   .text {
     color: #f2f2f2;
-    font-size: 20px;
-    padding: 12px 12px;
+    font-size: 12px;
+    padding: 8px 8px;
     position: absolute;
     bottom: 25px;
     width: 20%;
