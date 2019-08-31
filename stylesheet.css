@@ -81,7 +81,7 @@ li {
 /* Hero text */
 h1 {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 12.5rem;
+  font-size: 200px;
   font-weight: 900;
   color: #5e671cd3;
   text-shadow: 7px 7px rgba(255, 255, 255, 0.836);
@@ -91,21 +91,9 @@ h1 {
 
 h1:hover {
 color: white; 
-text-shadow: 0.43rem rgba(155, 91, 91, 0.801);
+text-shadow: 7px 7px rgba(155, 91, 91, 0.801);
 mix-blend-mode: difference;
 transition: 0.4s ease-in-out;
-}
-
-@media only screen and (max-width: 320px) {
-  h1 {
-    font-size: 6rem;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  h1 {
-    font-size: 3rem;
-  }
 }
 
 /* Headings */
@@ -371,17 +359,10 @@ span.waving {
      height: auto; 
  }
 
- @media only screen and (max-width: 320px) {
-  .slide {
-    display:none;
-    max-width: 100%; 
-    height: 70vh; 
-}
-
 .current {
     display:block;
     max-width: 100%; 
-    height: 70vh; 
+    height: auto; 
 }
 
 /* Slideshow container */
