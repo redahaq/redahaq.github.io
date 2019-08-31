@@ -1,0 +1,459 @@
+
+/**
+ * stylesheet.css
+ *
+ 
+ * Order
+ * - GENERAL
+ * - NAV BAR
+ * - LISTS
+ * - FONTS
+ * - LINKS
+ * - ICONS & BUTTONS
+ * - GRID CONTAINERS
+ * - SECTIONS (Grid Elements): About, Experience, 
+ * - QUOTES
+ * - ANIMATIONS
+ * - CAROUSEL
+
+
+
+
+/*------ GENERAL ------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0px 0px;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    padding: 0 130px;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    background-color: white;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* NAV BAR */
+nav {
+  width: 100%;
+  overflow: auto;
+  background-color: white;
+  font-size: 1em;
+  text-align: center;
+  align-items: center;
+}
+
+
+/*------ LISTS ------*/
+ul {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    list-style-type: none;
+}
+
+li {
+    display:grid;
+    margin: 1.2em;
+    text-align: center;
+}
+
+
+/*------ FONTS ------*/
+
+/* Hero text */
+h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 200px;
+  font-weight: 900;
+  color: #5e671cd3;
+  text-shadow: 7px 7px rgba(255, 255, 255, 0.836);
+  margin: 0em 0em;
+  padding:0em;
+}
+
+h1:hover {
+color: white; 
+text-shadow: 7px 7px rgba(155, 91, 91, 0.801);
+mix-blend-mode: difference;
+transition: 0.4s ease-in-out;
+}
+
+/* Headings */
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #5e671ce1;
+  margin: 1rem 1.3rem 0.1rem 0rem;
+}
+
+/* Subheading */
+h3 {
+  font-size: 1.6em;
+  font-weight: 600;
+  color:hsl(350, 46%, 68%);
+  margin: 1rem 0rem;
+}
+
+/* Header subtext */
+h4 {
+font-weight: bold;
+font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  margin: 1rem 1rem;
+}
+
+/* Image captions and footer text (not carousel captions) */
+h5 {
+  font-size: 0.7em;
+  color: #5e671ce1;
+  margin: 0rem;
+  text-align: center;
+}
+
+/* Quote source text */
+h6 {
+  font-weight: 200;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  margin: 1.4rem 2.8rem;
+}
+
+/* Paragraph */
+
+p {
+font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: rgb(97, 95, 95);
+  padding: 0px 0px;
+  margin: 0.3rem 1.3rem 1.3rem 0rem;
+}
+
+/*------ LINKS ------*/
+
+a {
+text-decoration: none;
+font-weight: bold;
+}
+
+a:link {
+color: rgba(126, 117, 117, 0.788);
+}
+
+a:visited {
+color: #5e671c;
+}
+
+a:hover {
+color: #6e4444;
+}
+
+.nav-link {
+color: rgba(126, 117, 117, 0.788);
+text-decoration: none;
+}
+
+
+/*------ ICONS & BUTTONS ------*/
+
+i.fas, i.fad {
+text-align:center;
+scroll-behavior: smooth;
+color:hsl(350, 46%, 68%);
+margin: 0.2em 0em;
+mix-blend-mode: difference;
+}
+
+i.fas:hover {
+color: #8f974d;
+mix-blend-mode: normal;
+}
+
+.fab {
+padding: 20px;
+font-size: 50px;
+margin-bottom: 20px;
+text-decoration: none;
+color: rgb(255, 255, 255);
+background: linear-gradient( hsl(350, 46%, 68%), #8d5d5d, #350a49);
+border-radius: 50%;
+}
+
+.fab:hover {
+background-color: #5e671c;
+transform: scale(1.1) ;
+transition: transform 0.3s ease-in-out;
+background: #8f974d;
+}
+
+/*------ GRID CONTAINERS ------*/
+
+/* 1 column */
+.grid0 {
+  display: grid;
+  grid-template-columns: 1fr;
+    grid-template-rows: 100%;
+}
+
+/* About: Interests */
+.grid1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100%;
+}
+
+/* About: Experience */
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+}
+
+/*------  SECTIONS ------*/
+
+/* Grid 0 elements - Header */
+header {
+  background-image: linear-gradient(130deg, transparent, rgba(0,0,0,.8)),
+  url("Images/parallax backgrounds/reda-trail.jpeg");
+  min-height: 800px;
+  background-attachment: fixed;
+  background-position: center ;
+  background-repeat: no-repeat;
+  grid-column: 1 / 1;
+  margin: 0;
+}
+
+.headerText {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 75px;
+  grid-column: 1 / 1;
+  margin: 0;
+}
+
+.headerSubtext {
+  padding: 0em 5em;
+  grid-column: 1 / 1;
+  margin: 0;
+}
+
+/* Grid 1 elements - About > Interests */
+.interests {
+  grid-column: 1 / 2;
+  margin: 0px, 0.1em;
+}
+
+.experience {
+    grid-column: 2 / 3;
+    margin: 0px, 0.1em;
+}
+
+.thegoodplace {
+    grid-column: 2 / 3;
+    margin: 0em 0em 0em 0em;
+    font-size: 1em;
+    text-align: center;
+}
+
+.thegoodplace > img {
+    width: 100%;
+    margin: auto;
+}
+
+.thegoodplace > img:hover {
+    transform: scale(0.98);
+    transition: transform 0.3s ease-in-out;
+}
+
+.xkcd {
+  /*  margin: 0rem 1.3rem;
+    object-fit:contain; */
+    max-width: 100%;
+    margin: auto;
+}
+
+/*------ QUOTES ------*/
+.quote {
+    height: auto;
+    position: relative;
+    margin: 0px 0px;
+    padding: 2em 2em;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+#quoteQuote {
+	font-size: 3rem;
+}
+
+#quoteSource {
+    color: #ffffff;
+}
+
+#quoteSource:hover {
+  color: #8f974d;
+}
+
+#quoteRec {
+    background-image: url("Images/parallax backgrounds/reda-balloons2.png");
+    margin:0rem 1.3rem 1.3rem 0rem;
+}
+
+#quoteCSlewis {
+    background-image: linear-gradient(rgba(136, 96, 78, 0.397), rgba(136, 96, 78, 0.397)), url("paper.jpg");
+    margin:1.3rem;
+}
+
+
+/*------ ANIMATIONS ------*/
+
+span.waving {
+  animation-name: waving;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes waving {
+    0% { transform: rotate(0deg)}
+   10% { transform: rotate(-10deg)}
+   20% { transform: rotate(12deg)}
+   30% { transform: rotate(-10deg)}
+   40% { transform: rotate(9deg)}
+   50% { transform: rotate(0deg)}
+   70% { transform: rotate(15deg)}
+   70% { transform: rotate(20deg)}
+  100% { transform: rotate(0deg)}
+}
+
+/*------ CAROUSEL ------*/
+
+ .slide {
+     display:none;
+     max-width: 100%; 
+     height: auto; 
+ }
+
+.current {
+    display:block;
+    max-width: 100%; 
+    height: auto; 
+}
+
+/* Slideshow container */
+.slideshow-container {
+    /*max-width: 100%; */
+    position: relative;
+    margin: auto;
+    overflow:hidden;
+    height: 70vh;
+    width: 80vw;
+  }
+
+/* Hide play button show pause */
+.playBtn {
+  display:none;
+}
+
+.pauseBtn {
+  display:block;
+}
+
+  /* Prev button positioning. Next, pause and play positioning in same place as Prev and then modified individually below.  */
+  .prevBtn , .nextBtn, .pauseBtn, .playBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 45%;
+    width: auto;
+    margin-top: -22px;
+    padding: 0; 
+    font-size: 2.5em;
+    transition: 0.4s ease;
+
+  }
+
+  /* Next button positioning, relative to Prev button */
+  .nextBtn {
+    right: 0%;
+  }
+
+    /* Pause button positioning, relative to Prev button */
+  .pauseBtn {
+    right: 0%;
+    top: 89%;
+  }
+
+  .playBtn {
+    right: 0%;
+    top: 89%;
+  }
+
+   /* Carousel buttons colour */
+  .prevBtn > i.fas,
+  .nextBtn > i.fas,
+  .pauseBtn > i.fas,
+  .playBtn > i.fas {
+    mix-blend-mode: normal;
+    color: hsl(350, 46%, 68%);
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%
+  }
+
+  /* Hover over carousel buttons colour */
+  .prevBtn > i.fas:hover,
+  .nextBtn > i.fas:hover,
+  .pauseBtn > i.fas:hover,
+  .playBtn > i.fas:hover {
+    color: rgb(255, 255, 255);
+    mix-blend-mode: normal;
+  }
+
+  /* Carousel caption style */
+  .text {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 12px 12px;
+    position: absolute;
+    bottom: 25px;
+    width: 20%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  /* Slide transition with a fade animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .7} 
+    to {opacity: 1}
+  }
+
