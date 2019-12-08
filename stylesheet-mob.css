@@ -299,8 +299,8 @@ header {
 }
 
 .xkcd {
-  /*  margin: 0rem 1.3rem;
-    object-fit:contain; */
+    display: flex;
+    justify-content: center;
     max-width: 100%;
     margin: auto;
 }
